@@ -4,18 +4,27 @@ import GoodBoi from './components/GoodBoi.vue'
 
 <template>
   <header>
-    <!-- replace this -->
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
+    <p>dark light mode button</p>
+    <div id="page-links-wrapper">
+      <p>ABOUT</p>
+      <p>LINKS</p>
+    </div>
   </header>
 
   <main>
+    <div id="first-page">
+      <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="500" />
+    </div>
     <GoodBoi />
   </main>
 </template>
 
 <style scoped>
 header {
-  line-height: 1.5;
+  height: 5rem;
+  place-items: center;
+  display: flex;
+  justify-content: space-between;
 }
 
 .logo {
@@ -24,20 +33,30 @@ header {
 }
 
 @media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
   .logo {
-    margin: 0 2rem 0 0;
+    margin: 0 0 9rem 0;
   }
 
   header .wrapper {
     display: flex;
     place-items: flex-start;
     flex-wrap: wrap;
+  }
+
+  #page-links-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    margin: 0 1rem;
+    font-size: 2rem;
+  }
+
+  #first-page {
+    width: 100vw;
+    height: calc(100vh - 2rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 </style>

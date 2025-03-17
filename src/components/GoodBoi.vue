@@ -1,3 +1,3 @@
 <template>
-  <p>doggo</p>
+  <p>DOGGOs</p>
 </template>
