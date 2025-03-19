@@ -1,14 +1,48 @@
-@import './base.css';
+@font-face {
+  font-family: FrontEndParty;
+  src: url(frontendparty.ttf);
+}
+:root {
+  --yellow: #fdd500ff;
+  --black: black;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  font-weight: normal;
+}
+
+body {
+  min-height: 100vh;
+  color: var(--black);
+  background: var(--yellow);
+  transition:
+    color 0.5s,
+    background-color 0.5s;
+  line-height: 1.6;
+  font-size: 15px;
+  font-family: 'FrontEndParty';
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
 #app {
   min-width: 100vw;
   width: fit-content;
 }
 
+#app * {
+  display: flex;
+  flex-direction: row;
+  place-items: center;
+}
+
 @media (min-width: 1024px) {
   body {
-    display: flex;
-    place-items: center;
     flex-direction: column;
   }
 }
