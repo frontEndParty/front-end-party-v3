@@ -1,6 +1,7 @@
 <script setup>
 // import GoodBoi from './components/GoodBoi.vue'
 import StarButton from './components/StarButton.vue'
+import EventFlyer from './components/EventFlyer.vue'
 </script>
 
 <template>
@@ -19,7 +20,7 @@ import StarButton from './components/StarButton.vue'
         <StarButton link="ABOUT" :rotation="170" rotationGroup="slow" />
       </div>
       <div class="column" style="flex-grow: 1">
-        <img alt="Front End Party Flyer" id="flyer" src="./assets/flyer.png" width="500" />
+        <EventFlyer start-time="6:30" door-time="6:00" next-date="3/11" />
       </div>
       <div class="column" style="flex-grow: 1">
         <StarButton link="HOSTS" :rotation="70" rotationGroup="slow" />
